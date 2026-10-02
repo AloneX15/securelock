@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         **Found a way to open, break or empty a protected block without permission?** Don't post it here.
-        Report it privately: https://github.com/AloneX15/securelock/security/advisories/new
+        Report it privately: https://github.com/AloneX15/securemod/security/advisories/new
   - type: input
     id: versions
     attributes:

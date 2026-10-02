@@ -6,9 +6,9 @@
   "description": "Security for Fabric servers: reinforced doors, passcode chests and barrels, keypads, keycards, retina scanners, padlocks for any container and first-class admin tools. All checks are server-side.",
   "authors": ["TakumiStudios"],
   "contact": {
-    "homepage": "https://github.com/AloneX15/securelock",
-    "sources": "https://github.com/AloneX15/securelock",
-    "issues": "https://github.com/AloneX15/securelock/issues"
+    "homepage": "https://github.com/AloneX15/securemod",
+    "sources": "https://github.com/AloneX15/securemod",
+    "issues": "https://github.com/AloneX15/securemod/issues"
   },
   "license": "MIT",
   "icon": "assets/securemod/icon.png",
@@ -34,7 +34,7 @@
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.wiki": "https://github.com/AloneX15/securelock/wiki"
+        "modmenu.wiki": "https://github.com/AloneX15/securemod/wiki"
       }
     }
   }

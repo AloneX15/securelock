@@ -5,7 +5,7 @@ Secure Mod is a security mod: a way to open, break, empty or move a protected bl
 ## Reporting a vulnerability
 **Do not open a public issue.** Report it privately through GitHub:
 
-1. Go to <https://github.com/AloneX15/securelock/security/advisories/new>.
+1. Go to <https://github.com/AloneX15/securemod/security/advisories/new>.
 2. Describe the bypass: Minecraft version, Secure Mod version, other mods installed, and the steps to reproduce.
 3. If you can, include a world or a datapack that reproduces it.
 
