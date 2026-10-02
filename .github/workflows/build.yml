@@ -58,7 +58,7 @@ jobs:
     name: Client test MC ${{ matrix.minecraft }}
     runs-on: ubuntu-latest
     # Si el juego se cuelga (p. ej. sin contexto OpenGL), el job no puede bloquear la CI
-    timeout-minutes: 20
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
@@ -74,7 +74,13 @@ jobs:
       - uses: gradle/actions/setup-gradle@v6
 
       - name: Install virtual display
-        run: sudo apt-get update && sudo apt-get install -y xvfb libgl1-mesa-dri libglx-mesa0 mesa-utils
+        run: sudo apt-get update && sudo apt-get install -y xvfb libgl1-mesa-dri libglx-mesa0 mesa-utils mesa-vulkan-drivers vulkan-tools
+
+      - name: Graphics diagnostics
+        continue-on-error: true
+        run: |
+          xvfb-run -a -s "-screen 0 1920x1080x24 +extension GLX +render" glxinfo -B || true
+          xvfb-run -a -s "-screen 0 1920x1080x24 +extension GLX +render" vulkaninfo --summary || true
 
       - name: Client gametest (renders every block and screen, restarts the world)
         env:
