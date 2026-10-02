@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "securelock:item/reinforced_oak_door"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": ["securelock:keycard_lv4", "minecraft:netherite_scrap"],
+  "result": {
+    "count": 1,
+    "id": "securelock:keycard_lv5"
+  }
+}

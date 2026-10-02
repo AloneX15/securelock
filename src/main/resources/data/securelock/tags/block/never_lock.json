@@ -1,0 +1,3 @@
+{
+  "values": ["minecraft:ender_chest", "#securelock:secure_blocks", {"id": "#c:ender_chests", "required": false}]
+}

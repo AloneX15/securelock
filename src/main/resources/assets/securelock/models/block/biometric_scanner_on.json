@@ -1,0 +1,7 @@
+{
+  "parent": "securelock:block/security_panel",
+  "textures": {
+    "front": "securelock:block/biometric_scanner_on",
+    "side": "securelock:block/security_panel_side"
+  }
+}

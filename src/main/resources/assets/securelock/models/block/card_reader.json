@@ -1,0 +1,7 @@
+{
+  "parent": "securelock:block/security_panel",
+  "textures": {
+    "front": "securelock:block/card_reader",
+    "side": "securelock:block/security_panel_side"
+  }
+}

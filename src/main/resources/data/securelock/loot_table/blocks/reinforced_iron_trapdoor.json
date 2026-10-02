@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "securelock:reinforced_iron_trapdoor"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "securelock:blocks/reinforced_iron_trapdoor"
+}

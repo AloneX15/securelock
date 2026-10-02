@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": ["minecraft:paper", "minecraft:paper", "minecraft:redstone", "minecraft:iron_ingot"],
+  "result": {
+    "count": 1,
+    "id": "securelock:keycard_lv1"
+  }
+}

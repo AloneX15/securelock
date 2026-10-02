@@ -1,0 +1,3 @@
+{
+  "values": ["#minecraft:doors", "#minecraft:trapdoors", "#minecraft:fence_gates", "#minecraft:shulker_boxes", "#minecraft:copper_chests", "minecraft:chest", "minecraft:trapped_chest", "minecraft:barrel", "minecraft:furnace", "minecraft:blast_furnace", "minecraft:smoker", "minecraft:hopper", "minecraft:dropper", "minecraft:dispenser", "minecraft:brewing_stand", "minecraft:crafter", "minecraft:chiseled_bookshelf", "minecraft:lectern", "minecraft:jukebox", "minecraft:decorated_pot", {"id": "#c:chests", "required": false}, {"id": "#c:barrels", "required": false}, {"id": "#c:shulker_boxes", "required": false}]
+}

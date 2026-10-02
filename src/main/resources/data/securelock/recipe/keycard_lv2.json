@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": ["securelock:keycard_lv1", "minecraft:gold_ingot"],
+  "result": {
+    "count": 1,
+    "id": "securelock:keycard_lv2"
+  }
+}

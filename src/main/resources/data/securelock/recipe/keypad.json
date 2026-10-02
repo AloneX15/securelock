@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {"B": "minecraft:stone_button", "I": "minecraft:iron_ingot", "R": "minecraft:redstone"},
+  "pattern": ["BBB", "IRI", "III"],
+  "result": {
+    "count": 1,
+    "id": "securelock:keypad"
+  }
+}

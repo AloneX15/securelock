@@ -1,0 +1,42 @@
+name: Bug report
+description: Something doesn't work as expected (not a security bypass — use a private advisory for those)
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Found a way to open, break or empty a protected block without permission?** Don't post it here.
+        Report it privately: https://github.com/AloneX15/securelock/security/advisories/new
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Minecraft, SecureLock, Fabric Loader and Fabric API
+      placeholder: "MC 26.3, SecureLock 1.0.0, Loader 0.19.5, Fabric API 0.161.0+26.3"
+    validations:
+      required: true
+  - type: dropdown
+    id: side
+    attributes:
+      label: Where does it happen?
+      options: [Singleplayer, Dedicated server, Both]
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Place a passcode chest\n2. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect and what happened?
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log / crash report
+      description: Paste a link (mclo.gs, gist) to latest.log or the crash report

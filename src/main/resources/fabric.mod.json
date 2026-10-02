@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "${id}",
+  "version": "${version}",
+  "name": "${name}",
+  "description": "Security for Fabric servers: reinforced doors, passcode chests and barrels, keypads, keycards, retina scanners, padlocks for any container and first-class admin tools. All checks are server-side.",
+  "authors": ["AloneX15"],
+  "contact": {
+    "homepage": "https://github.com/AloneX15/securelock",
+    "sources": "https://github.com/AloneX15/securelock",
+    "issues": "https://github.com/AloneX15/securelock/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/securelock/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.alonex15.securelock.SecureLock"],
+    "client": ["com.alonex15.securelock.client.SecureLockClient"],
+    "jade": ["com.alonex15.securelock.client.compat.SecureLockJadePlugin"]
+  },
+  "mixins": ["securelock.mixins.json"],
+  "depends": {
+    "fabricloader": ">=${loader}",
+    "minecraft": "${minecraft}",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "luckperms": "*",
+    "jade": "*",
+    "openpartiesandclaims": "*",
+    "flan": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.wiki": "https://github.com/AloneX15/securelock/wiki"
+      }
+    }
+  }
+}

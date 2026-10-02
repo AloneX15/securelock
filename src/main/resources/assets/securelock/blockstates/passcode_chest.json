@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "securelock:block/passcode_chest"
+    }
+  }
+}

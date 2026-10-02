@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "securelock-test",
+  "version": "1.0.0",
+  "name": "SecureLock GameTests",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-gametest": ["com.alonex15.securelock.test.SecureLockGameTests"],
+    "fabric-client-gametest": ["com.alonex15.securelock.test.SecureLockClientGameTest"]
+  },
+  "depends": {
+    "securelock": "*",
+    "fabric-gametest-api-v1": "*"
+  }
+}
