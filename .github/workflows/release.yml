@@ -1,9 +1,8 @@
 name: Release
 
-# Publica un jar por versión de Minecraft en GitHub, Modrinth y CurseForge al crear un tag vX.Y.Z.
-# Configura en el repositorio:
-#   secrets.MODRINTH_TOKEN, secrets.CURSEFORGE_TOKEN
-#   vars.MODRINTH_ID, vars.CURSEFORGE_ID  (ids de los proyectos, cuando existan)
+# Al subir un tag vX.Y.Z: compila y prueba cada versión de Minecraft y crea una release de GitHub con los jars.
+# Modrinth y CurseForge son opcionales: se publican solo si existen en el repositorio
+#   vars.MODRINTH_ID + secrets.MODRINTH_TOKEN   y/o   vars.CURSEFORGE_ID + secrets.CURSEFORGE_TOKEN
 
 on:
   push:
@@ -13,11 +12,11 @@ permissions:
   contents: write
 
 jobs:
-  publish:
-    name: Publish MC ${{ matrix.minecraft }}
+  build:
+    name: Build MC ${{ matrix.minecraft }}
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         include:
           - minecraft: "26.1.2"
@@ -32,27 +31,37 @@ jobs:
             game-versions: |
               26.3
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: 25
 
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v6
 
       - name: Build and test
         run: ./gradlew :${{ matrix.minecraft }}:build :${{ matrix.minecraft }}:runGameTest --stacktrace
 
-      - name: Publish
+      - uses: actions/upload-artifact@v7
+        with:
+          name: securelock-mc${{ matrix.minecraft }}
+          path: |
+            versions/${{ matrix.minecraft }}/build/libs/*.jar
+            !versions/${{ matrix.minecraft }}/build/libs/*-sources.jar
+          if-no-files-found: error
+
+      - name: Publish to Modrinth / CurseForge
+        if: ${{ vars.MODRINTH_ID != '' || vars.CURSEFORGE_ID != '' }}
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           modrinth-id: ${{ vars.MODRINTH_ID }}
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           curseforge-id: ${{ vars.CURSEFORGE_ID }}
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          files: versions/${{ matrix.minecraft }}/build/libs/!(*-sources).jar
+          files: |
+            versions/${{ matrix.minecraft }}/build/libs/*.jar
+            !versions/${{ matrix.minecraft }}/build/libs/*-sources.jar
           name: SecureLock ${{ github.ref_name }} for MC ${{ matrix.minecraft }}
           version: ${{ github.ref_name }}+mc${{ matrix.minecraft }}
           version-type: release
@@ -66,3 +75,25 @@ jobs:
             luckperms(optional)
             open-parties-and-claims(optional)
             flan(optional)
+
+  github-release:
+    name: GitHub release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: securelock-mc*
+          path: jars
+          merge-multiple: true
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" jars/*.jar \
+            --title "SecureLock $GITHUB_REF_NAME" \
+            --notes "Un jar por versión de Minecraft (26.1.x, 26.2.x, 26.3.x). Requiere Fabric Loader y Fabric API, en cliente y servidor. Cambios: ver CHANGELOG.md." \
+            --verify-tag
