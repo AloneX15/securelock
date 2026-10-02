@@ -7,6 +7,6 @@
 
 ## Checklist
 - [ ] Authorization stays server-side
-- [ ] No `@Overwrite` / `@Redirect`; new mixins use `require = 0`, `securelock$` handlers and are listed in `MIXINS.md`
+- [ ] No `@Overwrite` / `@Redirect`; new mixins use `require = 0`, `securemod$` handlers and are listed in `MIXINS.md`
 - [ ] New protections have a gametest
 - [ ] `CHANGELOG.md` updated (mark **⚠ BREAKING** changes to configs or worlds)

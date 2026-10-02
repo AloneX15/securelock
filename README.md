@@ -1,16 +1,16 @@
-# SecureLock
+# Secure Mod
+
+*Designed by TakumiStudios.*
 
 **Security for Fabric servers.** Reinforced doors, passcode chests and barrels, keypads, keycards, retina scanners, padlocks for *any* container (vanilla or modded) and first-class admin tools. Every check runs on the server.
 
 > *Leer en español: [README.es.md](README.es.md)*
 
-> ⚠️ **Working name.** A mod called *SecureLocks* already exists on Modrinth. Pick a unique name (and check Modrinth and CurseForge) before the first public release. The slugs `lockwright`, `ironward`, `vaultguard` and `lockforge` were free on Modrinth on 2026‑10‑02.
-
 | Minecraft | Loader | Java | Jar |
 |---|---|---|---|
-| 26.3.x | Fabric Loader ≥ 0.19.5 + Fabric API | 25 | `securelock-<version>+mc26.3.jar` |
-| 26.2.x | Fabric Loader ≥ 0.19.5 + Fabric API | 25 | `securelock-<version>+mc26.2.jar` |
-| 26.1.x | Fabric Loader ≥ 0.19.5 + Fabric API | 25 | `securelock-<version>+mc26.1.2.jar` |
+| 26.3.x | Fabric Loader ≥ 0.19.5 + Fabric API | 25 | `securemod-<version>+mc26.3.jar` |
+| 26.2.x | Fabric Loader ≥ 0.19.5 + Fabric API | 25 | `securemod-<version>+mc26.2.jar` |
+| 26.1.x | Fabric Loader ≥ 0.19.5 + Fabric API | 25 | `securemod-<version>+mc26.1.2.jar` |
 
 Required on **client and server** (it adds blocks, items and screens). The only hard dependency is **Fabric API**.
 
@@ -43,7 +43,7 @@ Reinforced doors, trapdoors and gates only react to keypads, readers and scanner
 - A protected block's support block is protected too.
 
 ### Admin tools
-`/securelock info | trust | untrust | trusted | list | inspect | debug | reload` and `/securelock admin unlock | transfer | purge | purgeinactive | unlockall | export`, LuckPerms‑compatible permission nodes (Fabric Permission API), audit log with per‑block history, automatic purge of inactive owners, per‑player limits, raid windows for faction servers. See [docs/commands-and-permissions.md](docs/commands-and-permissions.md).
+`/securemod info | trust | untrust | trusted | list | inspect | debug | reload` and `/securemod admin unlock | transfer | purge | purgeinactive | unlockall | export`, LuckPerms‑compatible permission nodes (Fabric Permission API), audit log with per‑block history, automatic purge of inactive owners, per‑player limits, raid windows for faction servers. See [docs/commands-and-permissions.md](docs/commands-and-permissions.md).
 
 ## Documentation
 - [Blocks, items and recipes](docs/blocks-and-items.md)
@@ -71,4 +71,4 @@ The project uses [Stonecutter](https://stonecutter.kikugie.dev/) to build every 
 Please report vulnerabilities privately — see [SECURITY.md](SECURITY.md).
 
 ## License
-[MIT](LICENSE) © AloneX15
+[MIT](LICENSE) © TakumiStudios

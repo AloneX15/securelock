@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "securemod:block/passcode_barrel_bottom",
+    "side": "securemod:block/passcode_barrel_side",
+    "top": "securemod:block/passcode_barrel_top"
+  }
+}

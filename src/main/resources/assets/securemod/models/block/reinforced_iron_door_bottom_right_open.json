@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "bottom": "securemod:block/reinforced_iron_door_bottom",
+    "top": "securemod:block/reinforced_iron_door_top"
+  }
+}

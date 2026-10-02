@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "securemod:passcode_barrel"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "securemod:blocks/passcode_barrel"
+}

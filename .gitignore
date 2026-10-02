@@ -48,7 +48,7 @@ versions/*/run/
 build/
 .gradle/
 logs/
-securelock-exports/
-securelock-backups/
+securemod-exports/
+securemod-backups/
 .idea/runConfigurations/
 .idea/workspace.xml

@@ -45,7 +45,7 @@ jobs:
 
       - uses: actions/upload-artifact@v7
         with:
-          name: securelock-mc${{ matrix.minecraft }}
+          name: securemod-mc${{ matrix.minecraft }}
           path: |
             versions/${{ matrix.minecraft }}/build/libs/*.jar
             !versions/${{ matrix.minecraft }}/build/libs/*-sources.jar
@@ -62,7 +62,7 @@ jobs:
           files: |
             versions/${{ matrix.minecraft }}/build/libs/*.jar
             !versions/${{ matrix.minecraft }}/build/libs/*-sources.jar
-          name: SecureLock ${{ github.ref_name }} for MC ${{ matrix.minecraft }}
+          name: Secure Mod ${{ github.ref_name }} for MC ${{ matrix.minecraft }}
           version: ${{ github.ref_name }}+mc${{ matrix.minecraft }}
           version-type: release
           changelog-file: CHANGELOG.md
@@ -85,7 +85,7 @@ jobs:
 
       - uses: actions/download-artifact@v8
         with:
-          pattern: securelock-mc*
+          pattern: securemod-mc*
           path: jars
           merge-multiple: true
 
@@ -94,6 +94,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "$GITHUB_REF_NAME" jars/*.jar \
-            --title "SecureLock $GITHUB_REF_NAME" \
+            --title "Secure Mod $GITHUB_REF_NAME" \
             --notes "Un jar por versión de Minecraft (26.1.x, 26.2.x, 26.3.x). Requiere Fabric Loader y Fabric API, en cliente y servidor. Cambios: ver CHANGELOG.md." \
             --verify-tag

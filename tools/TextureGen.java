@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.util.Random;
 
 /**
- * Genera las texturas de SecureLock (pixel art procedural original, 16x16).
- * Uso: java tools/TextureGen.java src/main/resources/assets/securelock
+ * Genera las texturas de Secure Mod (pixel art procedural original, 16x16).
+ * Uso: java tools/TextureGen.java src/main/resources/assets/securemod
  */
 public class TextureGen {
     // Paleta
@@ -19,7 +19,7 @@ public class TextureGen {
     static File root;
 
     public static void main(String[] args) throws IOException {
-        root = new File(args.length > 0 ? args[0] : "src/main/resources/assets/securelock");
+        root = new File(args.length > 0 ? args[0] : "src/main/resources/assets/securemod");
         new File(root, "textures/block").mkdirs();
         new File(root, "textures/item").mkdirs();
 

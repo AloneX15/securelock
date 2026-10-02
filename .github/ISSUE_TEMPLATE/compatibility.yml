@@ -1,17 +1,17 @@
 name: Compatibility issue
-description: A crash or broken behavior when SecureLock is used together with another mod
+description: A crash or broken behavior when Secure Mod is used together with another mod
 labels: ["compat"]
 body:
   - type: markdown
     attributes:
       value: |
-        Target: a fix in less than 72 hours for crashes caused by SecureLock.
-        Meanwhile you can turn off the affected protection with `compat.disable` in `config/securelock.json` (see `/securelock debug`).
+        Target: a fix in less than 72 hours for crashes caused by Secure Mod.
+        Meanwhile you can turn off the affected protection with `compat.disable` in `config/securemod.json` (see `/securemod debug`).
   - type: input
     id: versions
     attributes:
       label: Versions
-      placeholder: "MC 26.3, SecureLock 1.0.0, Loader 0.19.5, Fabric API 0.161.0+26.3"
+      placeholder: "MC 26.3, Secure Mod 1.0.0, Loader 0.19.5, Fabric API 0.161.0+26.3"
     validations:
       required: true
   - type: textarea
@@ -30,7 +30,7 @@ body:
   - type: textarea
     id: debug
     attributes:
-      label: Output of /securelock debug
+      label: Output of /securemod debug
   - type: textarea
     id: log
     attributes:

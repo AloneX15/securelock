@@ -1,8 +1,8 @@
 # Propiedades centralizadas por versión
 # https://stonecutter.kikugie.dev/wiki/config/properties#centralized-properties
-mod.id = "securelock"
-mod.name = "SecureLock"
-mod.group = "com.alonex15.securelock"
+mod.id = "securemod"
+mod.name = "Secure Mod"
+mod.group = "com.takumistudios.securemod"
 mod.version = "1.0.0"
 
 deps.fabric_loader = "0.19.5"

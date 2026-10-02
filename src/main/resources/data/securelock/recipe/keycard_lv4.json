@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": ["securelock:keycard_lv3", "minecraft:emerald"],
-  "result": {
-    "count": 1,
-    "id": "securelock:keycard_lv4"
-  }
-}

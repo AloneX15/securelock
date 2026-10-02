@@ -1,7 +1,0 @@
-{
-  "parent": "securelock:block/security_panel",
-  "textures": {
-    "front": "securelock:block/keypad_on",
-    "side": "securelock:block/security_panel_side"
-  }
-}

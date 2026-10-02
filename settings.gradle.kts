@@ -23,4 +23,4 @@ stonecutter {
     }
 }
 
-rootProject.name = "securelock"
+rootProject.name = "securemod"

@@ -1,8 +1,8 @@
 # Blocks, items and recipes
 
-All SecureLock blocks are **unbreakable in survival** (hardness −1), have a blast resistance of 3 600 000, can't be moved by pistons and are immune to withers and the ender dragon. The owner gets them back with the **Universal Block Remover**; in creative the owner (or an admin) can break them normally.
+All Secure Mod blocks are **unbreakable in survival** (hardness −1), have a blast resistance of 3 600 000, can't be moved by pistons and are immune to withers and the ender dragon. The owner gets them back with the **Universal Block Remover**; in creative the owner (or an admin) can break them normally.
 
-When you place a SecureLock block you become its owner. Chests, barrels and keypads open the settings panel right away so you can set a code.
+When you place a Secure Mod block you become its owner. Chests, barrels and keypads open the settings panel right away so you can set a code.
 
 ## Blocks
 
@@ -59,19 +59,19 @@ Right‑click it: it activates only for the owner, allowed players, trusted play
 
 | Item | Recipe | Use |
 |---|---|---|
-| Padlock | ` N ` / `N N` / `III` (N = iron nugget, I = iron ingot) | Right‑click a lockable block to lock it. Works on vanilla and modded blocks (tag `securelock:lockable`). The block is not replaced. |
+| Padlock | ` N ` / `N N` / `III` (N = iron nugget, I = iron ingot) | Right‑click a lockable block to lock it. Works on vanilla and modded blocks (tag `securemod:lockable`). The block is not replaced. |
 | Universal Block Modifier | `  R` / ` I ` / `I  ` (R = redstone) | Owner panel: mode, allowed/blocked players, code, keycard level. |
-| Universal Block Remover | `  D` / ` I ` / `I  ` (D = diamond) | Owner: removes a padlock (you get it back) or drops a SecureLock block as an item. 64 uses. |
+| Universal Block Remover | `  D` / ` I ` / `I  ` (D = diamond) | Owner: removes a padlock (you get it back) or drops a Secure Mod block as an item. 64 uses. |
 | Card Writer | `III` / `PRP` / `III` | Hold it and a keycard in the other hand, right‑click the air: the card is linked to you. |
 | Keycard Lv1 | shapeless: 2 paper + redstone + iron ingot | |
 | Keycard Lv2–Lv5 | shapeless: previous level + gold ingot / diamond / emerald / netherite scrap | |
-| Admin Tool | creative / `/give` only | Requires `securelock:admin.inspect`. Right‑click: full info. Sneak + right‑click (`securelock:admin.remove`): force unlock. |
+| Admin Tool | creative / `/give` only | Requires `securemod:admin.inspect`. Right‑click: full info. Sneak + right‑click (`securemod:admin.remove`): force unlock. |
 
 ## Access modes
 | Mode | Who can use the block |
 |---|---|
-| Private | Owner, allowed players, globally trusted players (`/securelock trust`), anyone with the code (for a few seconds). |
+| Private | Owner, allowed players, globally trusted players (`/securemod trust`), anyone with the code (for a few seconds). |
 | Shared | Private + members of the owner's scoreboard team (`allowTeamAccess`). |
 | Public | Anyone, except blocked players. Only the owner can break or configure it. |
 
-Blocked players are always denied (except admins with `securelock:admin.bypass`).
+Blocked players are always denied (except admins with `securemod:admin.bypass`).

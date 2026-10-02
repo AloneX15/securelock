@@ -1,14 +1,14 @@
 # Mixins
 
-SecureLock keeps mixins to a minimum and prefers Fabric API events (`UseBlockCallback`, `PlayerBlockBreakEvents`, `PlayerPickItemEvents`, attachments, payloads).
+Secure Mod keeps mixins to a minimum and prefers Fabric API events (`UseBlockCallback`, `PlayerBlockBreakEvents`, `PlayerPickItemEvents`, attachments, payloads).
 Every mixin:
 
 - uses MixinExtras injectors (`@WrapOperation`, `@ModifyExpressionValue`, `@WrapWithCondition`, `@ModifyReturnValue`, `@WrapMethod`) or, as a last resort, `@Inject(cancellable = true)`. **No `@Overwrite`, no `@Redirect`.**
 - has `require = 0`: if another mod changed the target, the game does not crash.
-- contains a single call to `SecureLockHooks`, which wraps the logic in `try/catch` and fails safe.
-- names its handlers with the `securelock$` prefix.
+- contains a single call to `SecureModHooks`, which wraps the logic in `try/catch` and fails safe.
+- names its handlers with the `securemod$` prefix.
 
-`SecureLockMixinPlugin` checks at load time that every handler is really connected to its target (including MixinExtras' late injections). A missing injection is logged once and shown in `/securelock debug`; the game keeps running. Functions can also be turned off with `compat.disable` in the config.
+`SecureModMixinPlugin` checks at load time that every handler is really connected to its target (including MixinExtras' late injections). A missing injection is logged once and shown in `/securemod debug`; the game keeps running. Functions can also be turned off with `compat.disable` in the config.
 
 | Mixin | Target | Why | Feature (`compat.disable`) | What is lost if it fails |
 |---|---|---|---|---|

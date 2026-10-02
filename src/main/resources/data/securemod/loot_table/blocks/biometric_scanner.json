@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "securemod:biometric_scanner"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "securemod:blocks/biometric_scanner"
+}

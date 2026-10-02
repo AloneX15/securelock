@@ -11,8 +11,8 @@ body:
     id: versions
     attributes:
       label: Versions
-      description: Minecraft, SecureLock, Fabric Loader and Fabric API
-      placeholder: "MC 26.3, SecureLock 1.0.0, Loader 0.19.5, Fabric API 0.161.0+26.3"
+      description: Minecraft, Secure Mod, Fabric Loader and Fabric API
+      placeholder: "MC 26.3, Secure Mod 1.0.0, Loader 0.19.5, Fabric API 0.161.0+26.3"
     validations:
       required: true
   - type: dropdown

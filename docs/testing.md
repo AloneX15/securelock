@@ -23,4 +23,4 @@ Repeat on **26.1.x, 26.2.x and 26.3.x** with a dedicated server (`./gradlew :<v>
 - [ ] Double chest: both halves protected
 - [ ] Big modpack (200+ mods): starts and basic use works
 
-Performance target: < 0.1 ms per tick with 10 000 protected blocks (measure with Spark). No SecureLock block ticks.
+Performance target: < 0.1 ms per tick with 10 000 protected blocks (measure with Spark). No Secure Mod block ticks.

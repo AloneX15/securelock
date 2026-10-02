@@ -1,14 +1,14 @@
-# SecureLock
+# Secure Mod
+
+*Diseñado por TakumiStudios.*
 
 **Seguridad para servidores Fabric.** Puertas reforzadas, cofres y barriles con contraseña, teclados numéricos, tarjetas de acceso, escáneres de retina, candados para *cualquier* contenedor (vanilla o de otros mods) y herramientas de administración de primera. Toda la autorización ocurre en el servidor.
 
-> ⚠️ **Nombre provisional.** Ya existe *SecureLocks* en Modrinth. Elige un nombre único (y compruébalo en Modrinth y CurseForge) antes de publicar. Los slugs `lockwright`, `ironward`, `vaultguard` y `lockforge` estaban libres en Modrinth el 02/10/2026.
-
 | Minecraft | Jar |
 |---|---|
-| 26.3.x | `securelock-<versión>+mc26.3.jar` |
-| 26.2.x | `securelock-<versión>+mc26.2.jar` |
-| 26.1.x | `securelock-<versión>+mc26.1.2.jar` |
+| 26.3.x | `securemod-<versión>+mc26.3.jar` |
+| 26.2.x | `securemod-<versión>+mc26.2.jar` |
+| 26.1.x | `securemod-<versión>+mc26.1.2.jar` |
 
 Requiere Fabric Loader ≥ 0.19.5, **Fabric API** y Java 25. Hay que instalarlo **en cliente y servidor**.
 
@@ -16,7 +16,7 @@ Requiere Fabric Loader ≥ 0.19.5, **Fabric API** y Java 25. Hay que instalarlo 
 - **Bloques:** puerta de hierro y de roble reforzadas, trampilla de hierro reforzada, puerta de valla de roble reforzada, cofre con contraseña (simple y doble), barril con contraseña, teclado numérico, lector de tarjetas y escáner de retina.
 - **Ítems:** candado (bloquea cualquier contenedor o puerta existente sin reemplazar el bloque), codificador universal, tarjetas de nivel 1–5, grabador de tarjetas, extractor universal de bloques y herramienta de administrador.
 - **Seguridad:** autorización 100 % en servidor, contraseñas con hash y salt, anti fuerza bruta, rate limiting de paquetes, registro de auditoría y protección contra romper, explosiones, pistones, tolvas, gólems de cobre, mobs, fuego, comparadores, Transfer API, pick block en creativo y espectadores.
-- **Administración:** comandos `/securelock`, permisos compatibles con LuckPerms, historial por bloque, purga de inactivos, límites por jugador, exportación a JSON y "raid windows" para servidores de facciones.
+- **Administración:** comandos `/securemod`, permisos compatibles con LuckPerms, historial por bloque, purga de inactivos, límites por jugador, exportación a JSON y "raid windows" para servidores de facciones.
 
 La documentación completa está en [`docs/`](docs/) (en inglés) y el estado de cada punto del plan en [docs/implementation-status.md](docs/implementation-status.md).
 
@@ -27,4 +27,4 @@ La documentación completa está en [`docs/`](docs/) (en inglés) y el estado de
 ```
 
 ## Licencia
-[MIT](LICENSE) © AloneX15
+[MIT](LICENSE) © TakumiStudios

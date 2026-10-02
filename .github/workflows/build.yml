@@ -38,7 +38,7 @@ jobs:
         if: ${{ !matrix.compat }}
         uses: actions/upload-artifact@v7
         with:
-          name: securelock-mc${{ matrix.minecraft }}
+          name: securemod-mc${{ matrix.minecraft }}
           path: |
             versions/${{ matrix.minecraft }}/build/libs/*.jar
             !versions/${{ matrix.minecraft }}/build/libs/*-sources.jar
@@ -107,7 +107,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v8
         with:
-          pattern: securelock-mc*
+          pattern: securemod-mc*
           path: jars
           merge-multiple: true
 

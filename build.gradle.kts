@@ -7,7 +7,7 @@ val modId = sc.properties.get<String>("mod.id")
 val modVersion = sc.properties.get<String>("mod.version")
 val mcVersion = sc.current.version
 
-// Nombre del jar: securelock-<versión del mod>+mc<versión>.jar
+// Nombre del jar: securemod-<versión del mod>+mc<versión>.jar
 version = "$modVersion+mc$mcVersion"
 group = sc.properties.get<String>("mod.group")
 base.archivesName = modId
@@ -39,7 +39,7 @@ loom {
 fabricApi {
     configureTests {
         createSourceSet = true
-        modId = "securelock-test"
+        modId = "securemod-test"
         enableGameTests = true
         enableClientGameTests = true
         eula = true

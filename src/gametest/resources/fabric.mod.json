@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "id": "securelock-test",
+  "id": "securemod-test",
   "version": "1.0.0",
-  "name": "SecureLock GameTests",
+  "name": "Secure Mod GameTests",
   "environment": "*",
   "entrypoints": {
-    "fabric-gametest": ["com.alonex15.securelock.test.SecureLockGameTests"],
-    "fabric-client-gametest": ["com.alonex15.securelock.test.SecureLockClientGameTest"]
+    "fabric-gametest": ["com.takumistudios.securemod.test.SecureModGameTests"],
+    "fabric-client-gametest": ["com.takumistudios.securemod.test.SecureModClientGameTest"]
   },
   "depends": {
-    "securelock": "*",
+    "securemod": "*",
     "fabric-gametest-api-v1": "*"
   }
 }

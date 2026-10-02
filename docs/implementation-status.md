@@ -1,4 +1,4 @@
-# Estado de implementación frente a `PLAN_MOD_SECURELOCK.md`
+# Estado de implementación frente a `PLAN_MOD_SECUREMOD.md`
 
 Leyenda: ✅ hecho y probado · 🟡 hecho con una decisión distinta (explicada) · ⏳ pendiente (fuera del código o de la v1)
 
@@ -16,7 +16,7 @@ Leyenda: ✅ hecho y probado · 🟡 hecho con una decisión distinta (explicada
 | 7. Comandos | ✅ | Todos los del plan + `trusted`, `inspect`, `debug`, `purgeinactive`, `unlockall`, `export`, `rollback`. |
 | 8. Configuración | ✅ | Todos los campos + perfiles, raid windows, `compat.disable`, fake players, `claimsGrantAccess`. |
 | 9. Persistencia | ✅ | Adjuntos del chunk + `SavedData` global por jugador + `dataVersion`. Probado cerrando y reabriendo el mundo. |
-| 10. Estructura | 🟡 | Paquete `com.alonex15.securelock`; `access/`, `lock/`, `compat/` y `api/` añadidos. No hacen falta BlockEntities propios. |
+| 10. Estructura | 🟡 | Paquete `com.takumistudios.securemod`; `access/`, `lock/`, `compat/` y `api/` añadidos. No hacen falta BlockEntities propios. |
 | 11. Recetas y balance | ✅ | Recetas caras (obsidiana + hierro). Los bloques propios solo caen con el Remover (son irrompibles en survival). |
 
 ## Sección 12 – Fases
@@ -45,12 +45,12 @@ Leyenda: ✅ hecho y probado · 🟡 hecho con una decisión distinta (explicada
 | 17.2-4 Rendimiento: sin ticks, caché de permisos | ✅ · ⏳ medir con Spark |
 | 17.2-5 GUIs, sonidos, partículas, barra de acción, tooltip, traducciones (en, es, pt, fr, de) | ✅ · ⏳ guía dentro del juego (v1.x) |
 | 17.2-6 Claims, Jade, LuckPerms, Transfer API | ✅ · REI/EMI muestran las recetas sin plugin |
-| 17.2-7 API pública | ✅ `SecureLockApi`, `SecureLockEvents` |
+| 17.2-7 API pública | ✅ `SecureModApi`, `SecureModEvents` |
 | 17.2-8 Perfiles y raid windows | ✅ |
 | 18 v1.x / v2 / v3 (Polymer, cámaras, láseres, bloques reforzados, torretas, panel web…) | ⏳ hoja de ruta, no forman parte de la v1 |
 | 19 Repo: MIT, plantillas, CONTRIBUTING, SECURITY, CHANGELOG, semver, publicación automática, wiki (`docs/`) | ✅ · ⏳ crear el repo en GitHub, secretos de publicación, página del mod con GIFs, Discord, beta abierta |
 | 20.1 No reemplazar ni modificar | ✅ adjuntos, clases vanilla, tags `c:`, tags `lockable`/`never_lock` |
-| 20.2 Reglas de mixins | ✅ MixinExtras, sin `@Overwrite`/`@Redirect`, `require = 0`, verificación al cargar, mixins condicionales, prefijo `securelock$`, `MIXINS.md` |
+| 20.2 Reglas de mixins | ✅ MixinExtras, sin `@Overwrite`/`@Redirect`, `require = 0`, verificación al cargar, mixins condicionales, prefijo `securemod$`, `MIXINS.md` |
 | 20.3 Robustez | ✅ try/catch y fallo seguro, datos corruptos/futuros cerrados, nunca cargar chunks, sin ticks, FakePlayer |
 | 20.4 Matriz de compatibilidad | ✅ automática con Lithium, FerriteCore, Jade, OPAC, Flan · ⏳ manual con Create, Carpet, Sodium/Iris y un modpack grande |
 | 20.5 Dependencias y metadatos | ✅ solo Fabric API obligatoria |
